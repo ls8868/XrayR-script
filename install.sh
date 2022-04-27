@@ -109,11 +109,7 @@ install_XrayR() {
     
         
         wget -q -N --no-check-certificate -O /usr/local/XrayR/XrayR-linux.zip https://github.com/ls8868/XrayR/releases/download/0.8.0/XrayR-linux-${arch}.zip
-        if [[ $? -ne 0 ]]; then
-            echo -e "${red}下载 XrayR 失败，请确保你的服务器能够下载 Github 的文件${plain}"
-            exit 1
-        fi
-    else
+        
         last_version=$1
         url="https://github.com/ls8868/XrayR/releases/download/0.8.0/XrayR-linux-${arch}.zip"
         echo -e "开始安装 XrayR v$1"
